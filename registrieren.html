@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="icon" href="./Pics/Favicon/Zeichenfläche 1.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="mantelindex">
+    <div class="div1">
+        <h2>Account erstellen</h2>
+        <form name="myForm" method="post">
+            <p>
+                Geben sie Ihren Benutzernamen ein.
+            </p>
+            <input type="text" name="Uname" class="inputText" placeholder="Benutzer">
+            <br><br>
+
+            <p>Passwort</p>
+            <input type="password" name="Pass" class="inputText" placeholder="Passwort">
+            <br><br>
+            <p>Passwort wiederholen</p>
+            <input type="password" name="Pass" class="inputText" placeholder="Passwort">
+            <br><br>
+            <input type="button" name="log" id="logButton" value="Account erstellen" class="knopf" onclick="login()">
+            <br><br>
+            <a href="index.html" class="verlinkung">Verklickt? Zurück zum Login.</a>
+        </form>
+    </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
