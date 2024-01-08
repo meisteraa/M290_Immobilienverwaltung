@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter und Profil</title>
+  <style>
+  </style>
+</head>
+<body>
 
+  <div id="header">
+    <h1>Filter und Profil</h1>
+  </div>
+
+  <div id="filters">
+    <div>
+      <label for="filter1">Filter 1:</label>
+      <select id="filter1">
+        <!-- Optionen für Filter 1 -->
+      </select>
+    </div>
+    <div>
+      <label for="filter2">Filter 2:</label>
+      <select id="filter2">
+        <!-- Optionen für Filter 2 -->
+      </select>
+    </div>
+    <button id="profile-button">Profil</button>
+  </div>
+
+  <div id="container">
+    <!-- Kästchen hier einfügen -->
+    <div class="box" onclick="openPopup(1)">1</div>
+    <div class="box" onclick="openPopup(2)">2</div>
+    <div class="box" onclick="openPopup(3)">3</div>
+    <!-- Weitere Kästchen hinzufügen -->
+  </div>
+
+  <div id="popup1" class="popup">
+    <span class="close" onclick="closePopup(1)">&times;</span>
+    <!-- Inhalt des Popups für Kästchen 1 -->
+    Informationen für Kästchen 1
+  </div>
+
+  <div id="popup2" class="popup">
+    <span class="close" onclick="closePopup(2)">&times;</span>
+    <!-- Inhalt des Popups für Kästchen 2 -->
+    Informationen für Kästchen 2
+  </div>
+
+  <div id="popup3" class="popup">
+    <span class="close" onclick="closePopup(3)">&times;</span>
+    <!-- Inhalt des Popups für Kästchen 3 -->
+    Informationen für Kästchen 3
+  </div>
+
+  <!-- Weitere Popups hinzufügen -->
+
+  <script>
+    function openPopup(id) {
+      document.getElementById('popup' + id).style.display = 'block';
+    }
+
+    function closePopup(id) {
+      document.getElementById('popup' + id).style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
