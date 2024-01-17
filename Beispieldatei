@@ -7,74 +7,159 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
+
         .header {
             background-color: #0000FF;
             color: white;
             padding: 10px;
-            text-align: center;
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
-        select {
+
+        .select-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
             margin: 10px;
-            padding: 5px;
         }
+
+        select {
+            margin: 5px 0;
+            padding: 8px;
+            width: 150px;
+        }
+
         .room {
             border: 1px solid #000;
-            margin: 10px;
-            padding: 10px;
+            margin: 2px;
+            padding: 30px;
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
+
         .booked {
             color: red;
         }
+
         .free {
             color: green;
         }
-        button {
-            padding: 5px 15px;
+
+        /* Styling for the custom button */
+        .custom-button {
+            display: inline-block;
+            padding: 10px 20px;
             background-color: #0000FF;
             color: white;
-            border: none;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .custom-button:hover {
+            background-color: #003366;
+        }
+
+        /* Media Query for screens with a resolution of 2048x1536 or higher */
+        @media (min-width: 2048px) and (min-height: 1536px) {
+            .header {
+                font-size: 24px;
+            }
+
+            select {
+                font-size: 16px;
+            }
+
+            .room {
+                font-size: 18px;
+            }
+        }
+
+        /* Additional media query for smaller screens, e.g., smartphones */
+        @media (max-width: 600px) {
+            .select-container {
+                margin: 10px 0;
+            }
+
+            select {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <label for="location">Standorte</label>
-    <select id="location">
-        <option value="bzz">BZZ Horgen</option>
-        <option value="bzz">BZZ Stäfa</option>
-        <!-- Weitere Standorte hier -->
-    </select>
-    <label for="floor">Etagen</label>
-    <select id="floor">
-        <option value="4">1. Etage</option>
-        <option value="4">2. Etage</option>
-        <option value="4">3. Etage</option>
-        <option value="4">4. Etage</option>
-        <!-- Weitere Etagen hier -->
-    </select>
-    <span>Profil</span>
+    <div class="select-container">
+        <label for="location">Standorte</label>
+        <select id="location">
+            <option value="bzz-horgen">BZZ Horgen</option>
+            <option value="bzz-staefa">BZZ Stäfa</option>
+            <!-- Weitere Standorte hier -->
+        </select>
+    </div>
+    <div class="select-container">
+        <label for="floor">Etagen</label>
+        <select id="floor">
+            <option value="1">1. Etage</option>
+            <option value="2">2. Etage</option>
+            <option value="3">3. Etage</option>
+            <option value="4">4. Etage</option>
+            <!-- Weitere Etagen hier -->
+        </select>
+    </div>
+    <div class="profil-container">
+        <h2></h2>
+    </div>
+    <div class="profil-container">
+        <h2></h2>
+    </div>
+    <div class="profil-container">
+        <h2></h2>
+    </div>
 </div>
 
 <div class="room">
     <span>Zimmer H401</span>
     <span class="free">Frei</span>
-    <button>buchen</button>
+    <!-- Updated button with <a> tag and styling -->
+    <a href="#" class="custom-button">Buchen</a>
 </div>
 
 <div class="room">
     <span>Zimmer H402</span>
     <span class="free">Frei</span>
-    <button>buchen</button>
+    <a href="#" class="custom-button">Buchen</a>
 </div>
 
 <div class="room">
     <span>Zimmer H403</span>
     <span class="booked">besetzt</span>
-    <button>buchen</button>
+    <a href="#" class="custom-button">Buchen</a>
+</div>
+
+<div class="room">
+    <span>Zimmer H404</span>
+    <span class="free">Frei</span>
+    <a href="#" class="custom-button">Buchen</a>
+</div>
+
+<div class="room">
+    <span>Zimmer H405</span>
+    <span class="free">Frei</span>
+    <a href="#" class="custom-button">Buchen</a>
+</div>
+
+<div class="room">
+    <span>Zimmer H406</span>
+    <span class="booked">besetzt</span>
+    <a href="#" class="custom-button">Buchen</a>
 </div>
 
 <!-- Weitere Zimmer hier -->
