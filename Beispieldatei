@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zimmerbuchung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #0000FF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        select {
+            margin: 10px;
+            padding: 5px;
+        }
+        .room {
+            border: 1px solid #000;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .booked {
+            color: red;
+        }
+        .free {
+            color: green;
+        }
+        button {
+            padding: 5px 15px;
+            background-color: #0000FF;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <label for="location">Standorte</label>
+    <select id="location">
+        <option value="bzz">BZZ Horgen</option>
+        <option value="bzz">BZZ Stäfa</option>
+        <!-- Weitere Standorte hier -->
+    </select>
+    <label for="floor">Etagen</label>
+    <select id="floor">
+        <option value="4">1. Etage</option>
+        <option value="4">2. Etage</option>
+        <option value="4">3. Etage</option>
+        <option value="4">4. Etage</option>
+        <!-- Weitere Etagen hier -->
+    </select>
+    <span>Profil</span>
+</div>
+
+<div class="room">
+    <span>Zimmer H401</span>
+    <span class="free">Frei</span>
+    <button>buchen</button>
+</div>
+
+<div class="room">
+    <span>Zimmer H402</span>
+    <span class="free">Frei</span>
+    <button>buchen</button>
+</div>
+
+<div class="room">
+    <span>Zimmer H403</span>
+    <span class="booked">besetzt</span>
+    <button>buchen</button>
+</div>
+
+<!-- Weitere Zimmer hier -->
+
+</body>
+</html>
