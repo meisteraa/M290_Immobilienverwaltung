@@ -1,32 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="icon" href="./Pics/Favicon/Zeichenfläche 1.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zimmerbuchung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #0000FF;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .select-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 10px;
+        }
+
+        select {
+            margin: 5px 0;
+            padding: 8px;
+            width: 150px;
+        }
+
+        .room {
+            border: 1px solid #000;
+            margin: 2px;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            display: none; /* Initially hide rooms */
+        }
+
+        .booked {
+            color: red;
+        }
+
+        .free {
+            color: green;
+        }
+
+        /* Styling for the "Buchen" button */
+        .custom-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0000FF;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .custom-button:hover {
+            background-color: #003366;
+        }
+
+        /* Styling for the "Profil" button */
+        .profil-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .profil-container h2 {
+            margin-right: 10px;
+        }
+
+        /* Media Query for screens with a resolution of 2048x1536 or higher */
+        @media (min-width: 2048px) and (min-height: 1536px) {
+            .header {
+                font-size: 24px;
+            }
+
+            select {
+                font-size: 16px;
+            }
+
+            .room {
+                font-size: 18px;
+            }
+        }
+
+        /* Additional media query for smaller screens, e.g., smartphones */
+        @media (max-width: 600px) {
+            .select-container {
+                margin: 10px 0;
+            }
+
+            select {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-<div id="mantelindex">
-    <div class="div1">
-        <h2>Login Form</h2>
-        <form name="myForm" method="post">
-            <p>
-                Geben sie Ihren Benutzernamen ein.
-            </p>
-            <input type="text" name="Uname" class="inputText" placeholder="Benutzer">
-            <br><br>
 
-            <p>Passwort</p>
-            <input type="password" name="Pass" class="inputText" placeholder="Passwort">
-            <br><br>
-            <input type="button" name="log" id="logButton" value="Login" class="knopf" onclick="login()">
-            <br><br>
-            <a href="registrieren.html" class="verlinkung">Kein Account? Hier Registrieren</a>
-        </form>
+<div class="header">
+    <div class="select-container">
+        <label for="location">Standorte</label>
+        <select id="location" onchange="filterRooms()">
+            <option value="all">Alle Standorte</option>
+            <option value="bzz-horgen">BZZ Horgen</option>
+            <option value="bzz-staefa">BZZ Stäfa</option>
+            <!-- Weitere Standorte hier -->
+        </select>
+    </div>
+    <div class="select-container">
+        <label for="floor">Etagen</label>
+        <select id="floor" onchange="filterRooms()">
+            <option value="all">Alle Etagen</option>
+            <option value="1">1. Etage</option>
+            <option value="2">2. Etage</option>
+            <option value="3">3. Etage</option>
+            <option value="4">4. Etage</option>
+            <!-- Weitere Etagen hier -->
+        </select>
+    </div>
+    <!-- Updated "Profil" container with an icon -->
+    <div class="profil-container">
+        <h2></h2>
+    </div>
+    <div class="profil-container">
+        <h2></h2>
+    </div>
+    <div class="profil-container">
+        <h2></h2>
     </div>
 </div>
-<script src="script.js"></script>
+
+<!-- Sample room entries with "Buchen" buttons -->
+
+<!-- Horgen -->
+<div class="room" data-location="bzz-horgen" data-floor="1">
+    <span>Zimmer BZZ Horgen H101</span>
+    <span class="free">Frei</span>
+    <a href="#" class="custom-button">Buchen</a>
+</div>
+
+<div class="room" data-location="bzz-horgen" data-floor="1">
+    <span>Zimmer BZZ Horgen H102</span>
+    <span class="free">Frei</span>
+    <a href="#" class="custom-button">Buchen</a>
+</div>
+
+<div class="room" data-location="bzz-horgen" data-floor="2">
+    <span>Zimmer BZZ Horgen H201</span>
+    <span class="free">Frei</span>
+    <a href="#" class="custom-button">Buchen</a>
+</div>
+
+<div class="room" data-location="bzz-horgen" data-floor="3">
+    <span>Zimmer BZZ Horgen H301</span>
+    <span class="booked">besetzt</span>
+    <a href="#" class="custom-button">Buchen</a>
+</div>
+
+<div class="room" data-location="bzz-horgen" data-floor="3">
+    <span>Zimmer BZZ Horgen H302</span>
+    <span class="booked">besetzt</span>
+    <a href="#" class="custom-button">Buchen</a>
+</div>
+
+<div class="room" data-location="bzz-horgen" data-floor="3">
+    <span>Zimmer BZZ Horgen H301</span>
+    <span class="booked">besetzt</span>
+    <a href="#" class="custom-button">Buchen</a>
+</div>
+
+
+<!-- Stäfa -->
+<div class="room" data-location="bzz-staefa" data-floor="2">
+    <span>Zimmer BZZ Stäfa S201</span>
+    <span class="free">Frei</span>
+    <a href="#" class="custom-button">Buchen</a>
+</div>
+
+<div class="room" data-location="bzz-staefa" data-floor="1">
+    <span>Zimmer BZZ Stäfa S101</span>
+    <span class="free">Frei</span>
+    <a href="#" class="custom-button">Buchen</a>
+</div>
+<!-- Weitere Zimmer hier -->
+
+<script>
+    function filterRooms() {
+        var locationFilter = document.getElementById('location').value;
+        var floorFilter = document.getElementById('floor').value;
+
+        var rooms = document.querySelectorAll('.room');
+
+        rooms.forEach(function (room) {
+            var location = room.getAttribute('data-location');
+            var floor = room.getAttribute('data-floor');
+
+            if ((locationFilter === 'all' || location === locationFilter) &&
+                (floorFilter === 'all' || floor === floorFilter)) {
+                room.style.display = 'flex';
+            } else {
+                room.style.display = 'none';
+            }
+        });
+    }
+</script>
 
 </body>
 </html>
