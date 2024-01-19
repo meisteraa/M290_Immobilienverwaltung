@@ -79,3 +79,5 @@ INSERT INTO Raeume (Raumnummer, TypID, StandortID, Kapazitaet) VALUES
 
 drop table benutzer;
 select * from benutzer;
+
+show tables from immobilienverwaltung;
