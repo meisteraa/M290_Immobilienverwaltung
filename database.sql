@@ -88,9 +88,12 @@ INSERT INTO Standort (StandortName) VALUES
 
 -- INSERT für Raeume
 INSERT INTO Raeume (Raumnummer, TypID, StandortID, Kapazitaet) VALUES
-    ('101', 2, 1, 20),
-    ('202', 1, 2, 15),
-    ('Meeting1', 3, 3, 10)
+    ('H101', 2, 1, 20),
+    ('H102', 2, 1, 20),
+    ('H103', 2, 1, 20),
+    ('H201', 2, 1, 20),
+    ('H202', 1, 2, 15),
+    ('H203', 3, 3, 10)
 
 drop table benutzer;
 select * from benutzer;
