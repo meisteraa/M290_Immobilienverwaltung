@@ -5,7 +5,7 @@ show databases;
 
 drop database 123tesst
 
-
+-- Erstellen der Datenbank Immobilienverwaltung
 create database if not exists immobilienverwaltung;
 
 use immobilienverwaltung;
