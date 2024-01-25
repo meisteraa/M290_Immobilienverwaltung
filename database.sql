@@ -93,7 +93,9 @@ INSERT INTO Raeume (Raumnummer, TypID, StandortID, Kapazitaet) VALUES
     ('H103', 2, 1, 20),
     ('H201', 2, 1, 20),
     ('H202', 1, 2, 15),
-    ('H203', 3, 3, 10);
+    ('H203', 3, 3, 10),
+    ('H301', 2, 1, 20),
+    ('H401', 2, 1, 20);
 
 drop table benutzer;
 select * from benutzer;
