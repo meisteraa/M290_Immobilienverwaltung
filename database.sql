@@ -3,7 +3,7 @@ create database if not exists 123tesst;
 
 show databases;
 
-drop database 123tesst
+drop database immobilienverwaltung
 
 -- Erstellen der Datenbank Immobilienverwaltung
 create database if not exists immobilienverwaltung;
@@ -79,7 +79,9 @@ INSERT INTO Benutzer (Benutzername, Passwort) VALUES
 INSERT INTO Ressourcentyp (TypName) VALUES
     ('IT'),
     ('Standard'),
-    ('Besprechungsraum');
+    ('Besprechungsraum'),
+    ('Gruppenraum'),
+    ('Lehrerzimmer');
 
 -- INSERT für Standort
 INSERT INTO Standort (StandortName) VALUES
@@ -89,19 +91,19 @@ INSERT INTO Standort (StandortName) VALUES
 
 -- INSERT für Raeume
 INSERT INTO Raeume (Raumnummer, TypID, StandortID, Kapazitaet) VALUES
-    ('H101', 2, 1, 20),
+    ('H101', 4, 1, 20),
     ('H102', 2, 1, 20),
-    ('H103', 2, 1, 20),
+    ('H103', 5, 1, 20),
     ('H201', 2, 1, 20),
     ('H202', 1, 1, 15),
     ('H203', 3, 1, 10),
     ('H301', 2, 1, 20),
-    ('H401', 2, 1, 20),
+    ('H401', 4, 1, 20),
     ('S101', 2, 2, 20),
     ('s201', 3, 2, 15),
     ('S301', 1, 2, 20),
     ('S401', 2, 2, 25),
-    ('O101', 2, 3, 25),
+    ('O101', 5, 3, 25),
     ('0102', 1, 3, 20);
 
 drop table benutzer;
