@@ -57,6 +57,21 @@ CREATE TABLE Reservationen (
 INSERT INTO Benutzer (Benutzername, Passwort) VALUES
     ('MaxMustermann', 'passwort123'),
     ('AnnaMiller', 'geheim123'),
+    ('AliceJohnson', 'Passwort123!'),
+    ('BobMiller', 'SecurePwd456'),
+    ('CarolSmith', 'SecretPass789'),
+    ('DavidJones', 'StrongPwd!'),
+    ('EmilyDavis', 'Pwd123ABC'),
+    ('FrankWilson', 'SecurePassword789'),
+    ('GraceTaylor', 'Pass123word'),
+    ('HenryClark', 'StrongPwd!567'),
+    ('IreneBrown', 'SecurePasswordABC'),
+    ('JackMartin', 'Pass123!word'),
+    ('KarenWhite', 'StrongPwd456!'),
+    ('LiamAnderson', 'Secure789Pwd'),
+    ('NatalieMoore', 'Pass123wordABC'),
+    ('OliverHill', 'StrongPwd!789'),
+    ('PatriciaTurner', 'SecurePassword123'),
     ('TomJones', 'test456');
 
 -- INSERT für Ressourcentyp
