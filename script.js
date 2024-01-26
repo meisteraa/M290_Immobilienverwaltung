@@ -76,6 +76,44 @@ app.get('/raeume', (req, res) => {
     })
 });
 
+app.get('/Reservationen', (req, res) => {
+    connection.query('SELECT * FROM ' +
+        'Reservationen', [req.params.id], (err, rows, fields) => {
+        if (!err) {
+            console.log(rows);
+            res.send(rows);
+        } else {
+            console.log(err);
+        }
+
+    })
+});
+
+app.get('/ressourcentyp', (req, res) => {
+    connection.query('SELECT * FROM ' +
+        'ressourcentyp', [req.params.id], (err, rows, fields) => {
+        if (!err) {
+            console.log(rows);
+            res.send(rows);
+        } else {
+            console.log(err);
+        }
+
+    })
+});
+
+app.get('/standort', (req, res) => {
+    connection.query('SELECT * FROM ' +
+        'standort', [req.params.id], (err, rows, fields) => {
+        if (!err) {
+            console.log(rows);
+            res.send(rows);
+        } else {
+            console.log(err);
+        }
+
+    })
+});
 
 app.get('/user/:id', (req, res) => {
     connection.query('SELECT * FROM user WHERE id = ?', [req.params.id], (err, rows, fields) => {
