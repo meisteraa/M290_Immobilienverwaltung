@@ -107,6 +107,6 @@ INSERT INTO Raeume (Raumnummer, TypID, StandortID, Kapazitaet) VALUES
     ('0102', 1, 3, 20);
 
 drop table benutzer;
-select * from benutzer;
+select * from raeume;
 
 show tables from immobilienverwaltung;

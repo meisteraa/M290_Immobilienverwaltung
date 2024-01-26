@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf08e07f-c7a1-414b-a6cb-92434625aa5d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="cf08e07f-c7a1-414b-a6cb-92434625aa5d" name="Changes" comment="Immubilienverwaltung 25.01.2024">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,36 +12,38 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2ZtB9XIw4wgJsoiPyuUm2YWMhrd" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ],
-    &quot;RunConfigurationTargetLRU&quot;: [
-      &quot;d5bbe1c5-b83c-44f7-b30c-5d49143cc5ed&quot;,
-      &quot;d5bbe1c5-b83c-44f7-b30c-5d49143cc5ed/schema/\&quot;immobilienverwaltung\&quot;&quot;
+    "RunConfigurationTargetLRU": [
+      "d5bbe1c5-b83c-44f7-b30c-5d49143cc5ed",
+      "d5bbe1c5-b83c-44f7-b30c-5d49143cc5ed/schema/\"immobilienverwaltung\""
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="database.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/database.sql" />
@@ -64,7 +67,11 @@
       <workItem from="1705045013891" duration="770000" />
       <workItem from="1705046552913" duration="271000" />
       <workItem from="1705563258455" duration="100000" />
-      <workItem from="1705563363606" duration="83000" />
+      <workItem from="1705563363606" duration="197000" />
+      <workItem from="1705648115764" duration="4000" />
+      <workItem from="1705651739833" duration="679000" />
+      <workItem from="1706175453142" duration="301000" />
+      <workItem from="1706252200414" duration="1618000" />
     </task>
     <servers />
   </component>
