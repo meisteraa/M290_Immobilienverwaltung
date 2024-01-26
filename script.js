@@ -62,6 +62,21 @@ app.get('/benutzer', (req, res) => {
 
     })
 });
+
+app.get('/raeume', (req, res) => {
+    connection.query('SELECT * FROM ' +
+        'raeume', [req.params.id], (err, rows, fields) => {
+        if (!err) {
+            console.log(rows);
+            res.send(rows);
+        } else {
+            console.log(err);
+        }
+
+    })
+});
+
+
 app.get('/user/:id', (req, res) => {
     connection.query('SELECT * FROM user WHERE id = ?', [req.params.id], (err, rows, fields) => {
         if (!err) {
