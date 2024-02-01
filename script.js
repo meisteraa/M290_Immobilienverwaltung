@@ -19,7 +19,7 @@ var app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 
-const port = 3000;
+const port = 3004;
 
 app.use(bodyParser.json());
 
@@ -115,17 +115,61 @@ app.get('/standort', (req, res) => {
     })
 });
 
-app.get('/user/:id', (req, res) => {
-    connection.query('SELECT * FROM user WHERE id = ?', [req.params.id], (err, rows, fields) => {
+
+
+app.get('/benutzer/:id', (req, res) => {
+    connection.query('SELECT * FROM benutzer WHERE BenutzerID = ?', [req.params.id], (err, rows, fields) => {
         if (!err) {
             console.log(rows);
             res.send(rows);
         } else {
             console.log(err);
+            res.status(500).send('Interner Serverfehler');
         }
-
-    })
+    });
 });
+
+app.get('/benutzer/:id', (req, res) => {
+    connection.query('SELECT * FROM benutzer WHERE BenutzerID = ?', [req.params.id], (err, rows, fields) => {
+        if (!err) {
+            console.log(rows);
+            res.send(rows);
+        } else {
+            console.log(err);
+            res.status(500).send('Interner Serverfehler');
+        }
+    });
+});
+
+
+
+app.get('/raeume/:id', (req, res) => {
+    connection.query('SELECT * FROM raeume WHERE RaumID = ?', [req.params.id], (err, rows, fields) => {
+        if (!err) {
+            console.log(rows);
+            res.send(rows);
+        } else {
+            console.log(err);
+            res.status(500).send('Interner Serverfehler');
+        }
+    });
+});
+
+
+
+app.get('/reservationen/:id', (req, res) => {
+    connection.query('SELECT * FROM reservationen WHERE ReservierungsID = ?', [req.params.id], (err, rows, fields) => {
+        if (!err) {
+            console.log(rows);
+            res.send(rows);
+        } else {
+            console.log(err);
+            res.status(500).send('Interner Serverfehler');
+        }
+    });
+});
+
+
 
 app.delete('/user/:id', (req, res) => {
     connection.query(' DELETE FROM user WHERE id = ? ', [req.params.id], (err, rows, fields) => {
