@@ -183,4 +183,16 @@ app.delete('/user/:id', (req, res) => {
     })
 });
 
+app.delete('/reservationen', (req, res) => {
+    connection.query(' DELETE FROM reservationen ', [req.params.id], (err, rows, fields) => {
+        if (!err) {
+            res.send('Delete operation was successful')
+            // res.send(rows)
+        } else {
+            console.log(err);
+        }
+
+    })
+});
+
 
