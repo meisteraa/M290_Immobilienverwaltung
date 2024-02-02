@@ -207,4 +207,28 @@ app.delete('/reservationen/:id', (req, res) => {
     })
 });
 
+app.delete('/benutzer', (req, res) => {
+    connection.query(' DELETE FROM benutzer ', [req.params.id], (err, rows, fields) => {
+        if (!err) {
+            res.send('Delete operation was successful')
+            // res.send(rows)
+        } else {
+            console.log(err);
+        }
+
+    })
+});
+
+app.delete('/benutzer/:id', (req, res) => {
+    connection.query(' DELETE FROM benutzer WHERE id = ? ' ', [req.params.id], (err, rows, fields) => {
+        if (!err) {
+            res.send('Delete operation was successful')
+            // res.send(rows)
+        } else {
+            console.log(err);
+        }
+
+    })
+});
+
 
