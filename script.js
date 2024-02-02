@@ -220,7 +220,7 @@ app.delete('/benutzer', (req, res) => {
 });
 
 app.delete('/benutzer/:id', (req, res) => {
-    connection.query(' DELETE FROM benutzer WHERE id = ? ' ', [req.params.id], (err, rows, fields) => {
+    connection.query(' DELETE FROM benutzer WHERE BenutzerID = ? ' , [req.params.id], (err, rows, fields) => {
         if (!err) {
             res.send('Delete operation was successful')
             // res.send(rows)
